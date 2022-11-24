@@ -3,7 +3,7 @@
 The public version of the file used for testing can be found here: https://gist.github.com/ConsenSys-Academy/ce47850a8e2cba6ef366625b665c7fba
 
 This test file has been updated for Truffle version 5.0. If your tests are failing, make sure that you are
-using Truffle version 5.0. You can check this by running "trufffle version"  in the terminal. If version 5 is not
+using Truffle version 5.0. You can check this by running "truffle version"  in the terminal. If version 5 is not
 installed, you can uninstall the existing version with `npm uninstall -g truffle` and install the latest version (5.0)
 with `npm install -g truffle`.
 
@@ -20,12 +20,12 @@ contract("SimpleBank", function (accounts) {
     instance = await SimpleBank.new();
   });
 
-//   it("ready to be solved!", async() => {
-//     const eth1000 = 1e21;
-//     // const aliceBalace = await web3.eth.getBalance(alice);
-//     // console.log(aliceBalance);
-//     assert.equal(await web3.eth.getBalance(alice), eth1000);
-//   });
+  it("ready to be solved!", async() => {
+    const eth1000 = 100000000000000000000;
+    const aliceBalance = await web3.eth.getBalance(alice);
+    console.log(aliceBalance);
+    assert.equal(await web3.eth.getBalance(alice), eth1000);
+  });
 
   it("is owned by owner", async () => {
     assert.equal(
